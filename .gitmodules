@@ -1,0 +1,3 @@
+[submodule "mlx9064x-driver-py"]
+	path = mlx9064x-driver-py
+	url = https://github.com/melexis-fir/mlx9064x-driver-py.git
