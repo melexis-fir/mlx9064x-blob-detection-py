@@ -21,10 +21,22 @@ EVB user interface:
 
 ## Getting started
 
-### Running mlx90640_demo.py
+### Clone and update submodules
+
+1. clone the project using: 
+```bash
+git clone https://github.com/melexis-fir/mlx9064x-blob-detection-py.git
+```
+2. navigate to ./mlx9064x-blob-detection-py/mlx9064x-driver-py and update submodule using:
+```bash
+git submodule init
+git submodule update
+```
+
+### Running mlx90640_opencv_blob_detection.py
 
 1. get the sources and chdir to the project-examples directory
-2. Run following command:
+2. run following command:
 ```bash
 python3 mlx90640_opencv_blob_detection.py
 ```
