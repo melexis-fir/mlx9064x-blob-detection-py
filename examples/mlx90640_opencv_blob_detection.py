@@ -163,12 +163,13 @@ def main():
         frame = dev.read_frame()
       except Exception as e:
         print ("ERROR:", e)
-        dev.clear_error(frame_rate)
+        dev.clear_error(frames_per_second)
       if frame is not None:
           array_temp = dev.do_compensation(frame)
           array_gray = [((x - TMIN)/(TMAX-TMIN))*255 for x in array_temp]
           # convert array to an opencv frame (monochrome)
           frame = np.flipud(np.array(array_gray, np.uint8).reshape((24, 32, 1)))
+          frame = cv.flip(frame, 0)
           blob_detection(frame, take_new_background)
           take_new_background = False
       key_pressed = cv.waitKey(1)
